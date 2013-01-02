@@ -35,7 +35,8 @@ start_sensors()
 {
     mkdir -p /data/system/sensors
     touch /data/system/sensors/settings
-    chmod 665 /data/system/sensors
+    chmod 775 /data/system/sensors
+    chmod 664 /data/system/sensors/settings
 
     mkdir -p /data/misc/sensors
     chmod 775 /data/misc/sensors
@@ -73,7 +74,7 @@ done
 # Start gpsone_daemon for SVLTE Type I & II devices
 #
 case "$target" in
-        "msm7630_fusion")
+        "msm7630_fusion" | "msm8960")
         start gpsone_daemon
 esac
 case "$baseband" in
@@ -128,5 +129,7 @@ case "$target" in
                  start profiler_daemon;;
         esac
         ;;
-
+    "msm8974")
+        start_sensors
+        ;;
 esac

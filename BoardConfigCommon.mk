@@ -27,12 +27,13 @@ COMMON_GLOBAL_CFLAGS += -DUSES_AUDIO_LEGACY
 
 TARGET_QCOM_DISPLAY_VARIANT := caf
 
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
-TARGET_KERNEL_SOURCE := kernel/lge/gee-common
+# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+# TARGET_KERNEL_SOURCE := kernel/lge/gee-common
 TARGET_NO_BOOTLOADER := true
 
 TARGET_SPECIFIC_HEADER_PATH := device/lge/gee-common/include
 
+TARGET_PREBUILT_KERNEL := device/lge/gee-common/kernel
 
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
