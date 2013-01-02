@@ -41,7 +41,6 @@ struct msm_rotator_data_info {
 	unsigned int version_key;
 	struct msmfb_data src_chroma;
 	struct msmfb_data dst_chroma;
-	struct mdp_buf_fence buf_fence;
 };
 
 struct msm_rot_clocks {
@@ -54,7 +53,6 @@ struct msm_rotator_platform_data {
 	unsigned int number_of_clocks;
 	unsigned int hardware_version_number;
 	struct msm_rot_clocks *rotator_clks;
-	const char *regulator_name;
 #ifdef CONFIG_MSM_BUS_SCALING
 	struct msm_bus_scale_pdata *bus_scale_table;
 #endif
