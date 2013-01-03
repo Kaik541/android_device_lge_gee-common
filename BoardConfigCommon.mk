@@ -77,9 +77,11 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_AP  := "ap"
 
-BOARD_EGL_CFG := device/lge/gee-common/egl.cfg
+# Flags 
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
-
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
 
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
@@ -89,6 +91,7 @@ TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 TARGET_USES_C2D_COMPOSITON := true
 BOARD_HAVE_OLD_ION_API := true
+BOARD_EGL_CFG := device/lge/gee-common/egl.cfg
 
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_gee-common
