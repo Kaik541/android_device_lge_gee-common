@@ -171,14 +171,14 @@ PRODUCT_PACKAGES += \
 	gralloc.msm8960 \
 	copybit.msm8960
 
-PRODUCT_PACKAGES += \
-	alsa.msm8960 \
-	audio_policy.msm8960 \
-	audio.primary.msm8960 \
-	audio.a2dp.default \
-	audio.usb.default \
-	audio.r_submix.default \
-	libaudio-resampler
+#PRODUCT_PACKAGES += \
+#	alsa.msm8960 \
+#	audio_policy.msm8960 \
+#	audio.primary.msm8960 \
+#	audio.a2dp.default \
+#	audio.usb.default \
+#	audio.r_submix.default \
+#	libaudio-resampler
 
 
 # Ramdisk
@@ -205,11 +205,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
 
-PRODUCT_PACKAGES += \
-	camera.gee-common \
-	camera.msm8960 \
-	libmmcamera_interface2 \
-	libmmcamera_interface
+#PRODUCT_PACKAGES += \
+#	camera.gee-common \
+#	camera.msm8960 \
+#	libmmcamera_interface2 \
+#	libmmcamera_interface
 
 # Just commnenting this out for now to get it building
 #PRODUCT_PACKAGES += \
@@ -220,12 +220,12 @@ PRODUCT_PACKAGES += \
 #	libstagefrighthw \
 #	libc2dcolorconvert
 
-PRODUCT_PACKAGES += \
-	libloc_adapter \
-	libloc_eng \
-	libloc_api_v02 \
-	libgps.utils \
-	gps.msm8960
+#PRODUCT_PACKAGES += \
+#	libloc_adapter \
+#	libloc_eng \
+#	libloc_api_v02 \
+#	libgps.utils \
+#	gps.msm8960
 
 PRODUCT_PACKAGES += \
 	bdAddrLoader \
@@ -265,4 +265,4 @@ PRODUCT_COPY_FILES += \
 	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
 	system/extras/bugmailer/send_bug:system/bin/send_bug
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
