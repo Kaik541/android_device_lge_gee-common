@@ -211,15 +211,14 @@ PRODUCT_PACKAGES += \
 	libmmcamera_interface2 \
 	libmmcamera_interface
 
-PRODUCT_PACKAGES += \
-	mm-vdec-omx-test \
-	mm-venc-omx-test720p \
-	libdivxdrmdecrypt \
-	libOmxVdec \
-	libOmxVenc \
-	libOmxCore \
-	libstagefrighthw \
-	libc2dcolorconvert
+# Just commnenting this out for now to get it building
+#PRODUCT_PACKAGES += \
+#	mm-vdec-omx-test \
+#	libdivxdrmdecrypt \
+#	libOmxVdec \
+#	libOmxVenc \
+#	libstagefrighthw \
+#	libc2dcolorconvert
 
 PRODUCT_PACKAGES += \
 	libloc_adapter \
