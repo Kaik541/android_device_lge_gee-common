@@ -33,8 +33,6 @@ TARGET_NO_BOOTLOADER := true
 
 TARGET_SPECIFIC_HEADER_PATH := device/lge/gee-common/include
 
-TARGET_PREBUILT_KERNEL := device/lge/gee-common/kernel
-
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true

@@ -60,7 +60,6 @@ PRODUCT_COPY_FILES += \
 	device/lge/gee-common/thermald-gee-common.conf:system/etc/thermald.conf
 
 PRODUCT_COPY_FILES += \
-	device/lge/gee-common/firmware-links.sh:root/firmware-links.sh \
 	device/lge/gee-common/media_profiles.xml:system/etc/media_profiles.xml \
 	device/lge/gee-common/media_codecs.xml:system/etc/media_codecs.xml
 
