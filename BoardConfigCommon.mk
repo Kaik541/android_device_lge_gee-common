@@ -1,0 +1,116 @@
+#
+# Copyright (C) 2011 The Android Open-Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+TARGET_QCOM_DISPLAY_VARIANT := caf
+
+# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+# TARGET_KERNEL_SOURCE := kernel/lge/gee-common
+TARGET_NO_BOOTLOADER := true
+
+TARGET_SPECIFIC_HEADER_PATH := device/lge/gee-common/include
+
+# Krait optimizations
+TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
+TARGET_USE_KRAIT_PLD_SET := true
+TARGET_KRAIT_BIONIC_PLDOFFS := 10
+TARGET_KRAIT_BIONIC_PLDTHRESH := 10
+TARGET_KRAIT_BIONIC_BBTHRESH := 64
+TARGET_KRAIT_BIONIC_PLDSIZE := 64
+
+
+BOARD_KERNEL_BASE := 0x80200000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_FORCE_RAMDISK_ADDRESS := 0x82200000
+
+
+BOARD_USES_ALSA_AUDIO:= true
+BOARD_USES_FLUENCE_INCALL := true
+BOARD_USES_SEPERATED_AUDIO_INPUT := true
+
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
+
+TARGET_NO_RADIOIMAGE := true
+TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno300
+TARGET_BOOTLOADER_BOARD_NAME := MSM8960
+TARGET_BOOTLOADER_NAME=geehrc
+
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/gee-common/bluetooth
+
+# FIXME: HOSTAPD-derived wifi driver
+BOARD_HAS_QCOM_WLAN := true
+BOARD_WLAN_DEVICE := qcwcn
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_HOSTAPD_DRIVER := NL80211
+WIFI_DRIVER_FW_PATH_STA := "sta"
+WIFI_DRIVER_FW_PATH_AP  := "ap"
+
+# Flags 
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_NO_HW_VSYNC := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
+#BOARD_USES_HGL := true
+#BOARD_USES_OVERLAY := true
+USE_OPENGL_RENDERER := true
+TARGET_USES_ION := true
+TARGET_USES_OVERLAY := true
+TARGET_USES_SF_BYPASS := true
+TARGET_USES_C2D_COMPOSITION := true
+BOARD_HAVE_OLD_ION_API := true
+BOARD_EGL_CFG := device/lge/gee-common/egl.cfg
+
+#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_gee-common
+
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672 # 22M
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 23068672 # 22M
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 880803840 # 840M
+
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 6189744128 # 5.9G
+BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
+
+BOARD_USES_SECURE_SERVICES := true
+
+BOARD_USES_EXTRA_THERMAL_SENSOR := true
+BOARD_USES_CAMERA_FAST_AUTOFOCUS := true
+
+# QCOM hardware
+BOARD_USES_QCOM_GPS := true
+BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
+
+# GPS
+#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := msm8960
+
+
+TARGET_RELEASETOOLS_EXTENSIONS := device/lge/gee-common
+
+-include vendor/lge/gee-common/BoardConfigVendor.mk
