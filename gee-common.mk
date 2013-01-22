@@ -171,7 +171,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += debug.mdpcomp.maxlayer=3
 
 #Add needed Library for sensors and other HAL Functions
-
 PRODUCT_PROPERTY_OVERRIDES += ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 PRODUCT_CHARACTERISTICS := nosdcard
