@@ -165,7 +165,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.telephony.call_ring.multiple=0
+	ro.telephony.call_ring.multiple=0 \
+        rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 #Upto 3 layers can go through overlays
 PRODUCT_PROPERTY_OVERRIDES += debug.mdpcomp.maxlayer=3
