@@ -65,8 +65,7 @@ PRODUCT_PACKAGES += \
     init.wlan-on-off.sh \
     thermald-8064.conf \
     thermald-8930.conf \
-    thermald-8960.conf \
-    vold.fstab    
+    thermald-8960.conf
 
 PRODUCT_COPY_FILES += \
 	device/lge/gee-common/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
